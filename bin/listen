@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require 'listen'
+
+listener = Listen.to('app/views', 'app/helpers') do
+  `touch app/javascript/packs/application.js`
+end
+listener.start
+sleep
